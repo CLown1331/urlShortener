@@ -40,7 +40,7 @@ namespace urlShortenerService.Controllers
         {
             _shortUrlService.Create(shortUrl);
 
-            return CreatedAtRoute("GetShortUrl", new { id = shortUrl.Id.ToString() }, shortUrl);
+            return CreatedAtRoute("GetShortUrl", new { url = shortUrl.Url.ToString() }, shortUrl);
         }
 
         [HttpPut("{url}")]

@@ -30,7 +30,7 @@ namespace urlShortenerService.Services
 
         public ShortUrl Create(ShortUrl shortUrl)
         {
-            // shortUrl.Url = GenerateShortUrl();
+            shortUrl.Url = GenerateShortUrl();
             _shortUrl.InsertOne(shortUrl);
             return shortUrl;
         }
